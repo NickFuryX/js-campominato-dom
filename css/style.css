@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.left-head {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.my-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+
+.myMain {
+  height: calc(100vh - 100px - 50px);
+  background-color: rgb(116 255 206);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game-start {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+footer {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.quadrato {
+  height: 500px;
+  width: 500px;
+  border: 1.5px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mini-quadrato-10x10 {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  background-color: aqua;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-size: cover;
+}
+.mini-quadrato-9x9 {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+  background-color: aqua;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+.mini-quadrato-7x7 {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+  background-color: aqua;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.no-pointer{
+  cursor: default;
+}
