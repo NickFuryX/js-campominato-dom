@@ -50,7 +50,7 @@ let attempts = 0;
 
 function generateBomb() {
   bombArray = [];
-  
+
   let max_attempt = 0;
   let difficolta = document.getElementById("difficolta").value;
   if (difficolta === "facile") {
@@ -79,7 +79,7 @@ function gameFunction() {
     gameOver();
   } else {
     this.style.backgroundColor = "#6495ed";
-    console.log(attempts)
+    console.log(attempts);
     if (attempts === numQuadrati - BOMB_NUMBER) {
       gameWin();
     }
@@ -97,6 +97,13 @@ function gameOver() {
   for (let i = 0; i < allCells.length; i++) {
     allCells[i].removeEventListener("click", gameFunction);
     allCells[i].classList.add("no-pointer");
+  }
+  let caselle = document.getElementsByClassName("mini-quadrato");
+  for (let i = 0; i < caselle.length; i++) {
+    if (bombArray.includes(parseInt(caselle[i].innerText))) {
+      caselle[i].style.backgroundImage = "url(../img/bomb.jpg)";
+      caselle[i].innerText = "";
+    }
   }
 }
 
