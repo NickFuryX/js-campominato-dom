@@ -4,6 +4,7 @@ button.addEventListener("click", generateBomb);
 let numQuadrati;
 let main = document.getElementById("myMain");
 let bombArray = [];
+const BOMB_NUMBER = 16;
 
 function gridGenerate() {
   let difficolta = document.getElementById("difficolta").value;
@@ -49,7 +50,7 @@ let attempts = 0;
 
 function generateBomb() {
   bombArray = [];
-  const BOMB_NUMBER = 1;
+  
   let max_attempt = 0;
   let difficolta = document.getElementById("difficolta").value;
   if (difficolta === "facile") {
@@ -79,7 +80,7 @@ function gameFunction() {
   } else {
     this.style.backgroundColor = "#6495ed";
     console.log(attempts)
-    if (attempts === numQuadrati - 1) {
+    if (attempts === numQuadrati - BOMB_NUMBER) {
       gameWin();
     }
   }
